@@ -1,7 +1,11 @@
 {
   "name": "pokemon-go-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The unofficial Pokemon Go API.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:carldanley/node-pokemon-go-api.git"
+  },
   "main": "index.js",
   "author": "Carl Danley <carldanley@gmail.com>",
   "license": "MIT",

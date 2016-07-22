@@ -10,7 +10,9 @@ const protos = {
   ResponseEnvelope: {file: './response.proto', name: 'ResponseEnvelope'},
   Enums: {file: './enums.proto'},
   ProfileResponse: {file: './responses/profile.proto', name: 'ProfileResponse'},
-  InventoryResponse: {file: './responses/inventory.proto', name: 'InventoryResponse'}
+  InventoryResponse: {file: './responses/inventory.proto', name: 'InventoryResponse'},
+  MapObjectsRequest: {file: './requests/map-objects.proto', name: 'GetMapObjectsMessage'},
+  MapObjectsResponse: {file: './responses/map-objects.proto', name: 'GetMapObjectsResponse'}
 };
 
 // build all of the protos now

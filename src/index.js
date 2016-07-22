@@ -93,6 +93,29 @@ var fn = {
 
   },
 
+  mapData: {
+
+    getNearby: function() {
+      return require('./requests/get-map-data')(fn.cache.playerEndpoint,
+        fn.cache.location.latitude, fn.cache.location.longitude,
+        fn.cache.provider, fn.cache.token);
+    },
+
+    getByCoordinates: function(latitude, longitude) {
+      return require('./requests/get-map-data')(fn.cache.playerEndpoint,
+        latitude, longitude, fn.cache.provider, fn.cache.token);
+    },
+
+    getByAddress: function(address) {
+      return location.coordinates.getByAddress(address)
+        .then(function(location) {
+          return fn.mapData.getByCoordinates(location.latitude,
+            location.longitude);
+        });
+    }
+
+  },
+
   getPlayerEndpoint: function() {
     const request = require('./requests/get-player-endpoint')(fn.cache.location.latitude,
       fn.cache.location.longitude, fn.cache.provider, fn.cache.token);

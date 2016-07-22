@@ -4,67 +4,32 @@
 
 ### Supported methods
 
-1. `.login(username, password, type)`
-1. `.location.set('address', address)`
-1. `.location.set('coordinates', latitude, longitude)`
-1. `.getPlayerEndpoint()`
-1. `.profile.get()`
-1. `.inventory.get()`
+* `.login(username, password, type)`
+  * `username` - the username of the account
+  * `password` - the password of the account
+  * `type` - a string that's either `google` or `pokemon-club`
+* `.location.set('address', address)`
+  * `address` - the street address as a string
+* `.location.set('coordinates', latitude, longitude)`
+  * `latitude` - the latitude float
+  * `longitude` - the longitude float
+* `.getPlayerEndpoint()`
+* `.profile.get()`
+* `.inventory.get()`
+* `.mapData.getNearby()`
+* `.mapData.getByAddress(address)`
+  * `address` - the street address as a string
+* `.mapData.getByCoordinates(latitude, longitude)`
+  * `latitude` - the latitude float
+  * `longitude` - the longitude float
 
 ### Code Examples
 
-#### Login with Google
+For a working set of code examples, visit the [Examples](https://github.com/carldanley/node-pokemon-go-api/tree/master/examples) section of the repository.
 
-```
-const api = require('pokemon-go-api');
+### Thanks
 
-api.login('username', 'password', 'google')
-  .then(function(token) {
-    console.log('Token:', token);
-  })
-  .catch(function(error) {
-    console.log('Error:', error.stack);
-  });
-```
+This package is made possible thanks to:
 
-#### Login with Pokemon Club
-
-```
-const api = require('pokemon-go-api');
-
-api.login('username', 'password', 'pokemon-club')
-  .then(function(token) {
-    console.log('Token:', token);
-  })
-  .catch(function(error) {
-    console.log('Error:', error.stack);
-  });
-```
-
-#### Set the player's location using an address
-
-```
-const api = require('pokemon-go-api');
-
-api.location.set('address', 'some address here')
-  .then(function(location) {
-    console.log('Location:', location);
-  })
-  .catch(function(error) {
-    console.log('Error:', error.stack);
-  });
-```
-
-#### Set the player's location using coordinates
-
-```
-const api = require('pokemon-go-api');
-
-api.location.set('coordinates', latitude, longitude)
-  .then(function(location) {
-    console.log('Location:', location);
-  })
-  .catch(function(error) {
-    console.log('Error:', error.stack);
-  });
-```
+* [https://github.com/tejado/pgoapi](https://github.com/tejado/pgoapi)
+* [https://github.com/AeonLucid/POGOProtos](https://github.com/AeonLucid/POGOProtos)

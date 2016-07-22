@@ -7,6 +7,9 @@
 1. `.login(username, password, type)`
 1. `.location.set('address', address)`
 1. `.location.set('coordinates', latitude, longitude)`
+1. `.getPlayerEndpoint()`
+1. `.profile.get()`
+1. `.inventory.get()`
 
 ### Code Examples
 

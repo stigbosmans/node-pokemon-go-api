@@ -1,0 +1,15 @@
+{
+  "name": "pokemon-go-api",
+  "version": "0.0.1",
+  "description": "The unofficial Pokemon Go API.",
+  "main": "index.js",
+  "author": "Carl Danley <carldanley@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "gpsoauthnode": "0.0.5",
+    "lodash": "^4.13.1",
+    "protobufjs": "^5.0.1",
+    "request": "^2.73.0"
+  }
+}

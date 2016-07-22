@@ -16,7 +16,7 @@ exports = module.exports = function(endpoint, latitude, longitude, provider, tok
     .sendRaw(endpoint, requests)
     .then(function(response) {
       const inventoryPayload = response.returns[0];
-      const decoded = rpcApi.protos.InventoryPayload.decode(inventoryPayload);
+      const decoded = rpcApi.protos.InventoryResponse.decode(inventoryPayload);
       return decoded.inventory_delta.inventory_items;
     });
 };

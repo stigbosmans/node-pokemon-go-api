@@ -1,4 +1,4 @@
-message InventoryPayload {
+message InventoryResponse {
   required bool success = 1;
   required InventoryDelta inventory_delta = 2;
 

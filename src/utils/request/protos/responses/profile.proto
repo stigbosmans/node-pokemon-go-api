@@ -1,4 +1,4 @@
-message ProfilePayload {
+message ProfileResponse {
   repeated int32 unknown1 = 1;
   required Profile profile = 2;
 

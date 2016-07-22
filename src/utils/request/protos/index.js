@@ -9,8 +9,8 @@ const protos = {
   RequestEnvelope: {file: './request.proto', name: 'RequestEnvelope'},
   ResponseEnvelope: {file: './response.proto', name: 'ResponseEnvelope'},
   Enums: {file: './enums.proto'},
-  ProfilePayload: {file: './profile-payload.proto', name: 'ProfilePayload'},
-  InventoryPayload: {file: './inventory-payload.proto', name: 'InventoryPayload'}
+  ProfileResponse: {file: './responses/profile.proto', name: 'ProfileResponse'},
+  InventoryResponse: {file: './responses/inventory.proto', name: 'InventoryResponse'}
 };
 
 // build all of the protos now

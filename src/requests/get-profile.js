@@ -13,6 +13,6 @@ exports = module.exports = function(endpoint, latitude, longitude, provider, tok
     .sendRaw(endpoint, requests)
     .then(function(response) {
       const profilePayload = response.returns[0];
-      return rpcApi.protos.ProfilePayload.decode(profilePayload).profile;
+      return rpcApi.protos.ProfileResponse.decode(profilePayload).profile;
     });
 };

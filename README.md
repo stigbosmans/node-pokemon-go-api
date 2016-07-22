@@ -2,6 +2,10 @@
 
 > The unofficial Pokemon Go API (while it lasts).
 
+### How to Install
+
+`npm install pokemon-go-api --save`
+
 ### Supported methods
 
 * `.login(username, password, type)`

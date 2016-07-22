@@ -3,8 +3,8 @@ const bPromise = require('bluebird');
 const _ = require('lodash');
 
 // internal dependencies
-const login = require('./login');
-const location = require('./location');
+const login = require('./src/login');
+const location = require('./src/location');
 
 // main functions
 var fn = {
@@ -76,7 +76,7 @@ var fn = {
   profile: {
 
     get: function() {
-      return require('./requests/get-profile')(fn.cache.playerEndpoint,
+      return require('./src/requests/get-profile')(fn.cache.playerEndpoint,
         fn.cache.location.latitude, fn.cache.location.longitude,
         fn.cache.provider, fn.cache.token);
     }
@@ -86,7 +86,7 @@ var fn = {
   inventory: {
 
     get: function() {
-      return require('./requests/get-inventory')(fn.cache.playerEndpoint,
+      return require('./src/requests/get-inventory')(fn.cache.playerEndpoint,
         fn.cache.location.latitude, fn.cache.location.longitude,
         fn.cache.provider, fn.cache.token);
     }
@@ -96,13 +96,13 @@ var fn = {
   mapData: {
 
     getNearby: function() {
-      return require('./requests/get-map-data')(fn.cache.playerEndpoint,
+      return require('./src/requests/get-map-data')(fn.cache.playerEndpoint,
         fn.cache.location.latitude, fn.cache.location.longitude,
         fn.cache.provider, fn.cache.token);
     },
 
     getByCoordinates: function(latitude, longitude) {
-      return require('./requests/get-map-data')(fn.cache.playerEndpoint,
+      return require('./src/requests/get-map-data')(fn.cache.playerEndpoint,
         latitude, longitude, fn.cache.provider, fn.cache.token);
     },
 
@@ -117,7 +117,7 @@ var fn = {
   },
 
   getPlayerEndpoint: function() {
-    const request = require('./requests/get-player-endpoint')(fn.cache.location.latitude,
+    const request = require('./src/requests/get-player-endpoint')(fn.cache.location.latitude,
       fn.cache.location.longitude, fn.cache.provider, fn.cache.token);
 
     return request

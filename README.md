@@ -1,6 +1,6 @@
 # pokemon-go-api
 
-> The unofficial Pokemon Go API.
+> The unofficial Pokemon Go API (while it lasts).
 
 ### Supported methods
 

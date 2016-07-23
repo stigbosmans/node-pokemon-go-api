@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.4.1",
+    "geocoder": "^0.2.2",
     "gpsoauthnode": "0.0.5",
     "lodash": "^4.13.1",
     "protobufjs": "^5.0.1",

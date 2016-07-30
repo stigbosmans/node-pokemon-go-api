@@ -1,6 +1,6 @@
 {
   "name": "pokemon-go-api",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "The unofficial Pokemon Go API (while it lasts).",
   "repository": {
     "type": "git",

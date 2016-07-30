@@ -83,13 +83,14 @@ var fn = {
         var body;
 
         try {
-          body = JSON.parse(data.body);
+          if(body){
+            body = JSON.parse(data.body);
+            if (body.errors && body.errors.length) {
+            return bPromise.reject(new Error('Error logging in: ' + body.errors[0]));
+            }
+          }
         } catch (err) {
           return bPromise.reject(new Error('Error parsing body'));
-        }
-
-        if (body.errors && body.errors.length) {
-          return bPromise.reject(new Error('Error logging in: ' + body.errors[0]));
         }
 
         return data.response.headers['location'].split('ticket=')[1];
